@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String              @id @default(cuid())
+  email         String              @unique
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  subscription  Subscription?
+  runs          LeadGenerationRun[]
+}
+
+model Subscription {
+  id                   String   @id @default(cuid())
+  userId               String   @unique
+  stripeCustomerId     String?  @unique
+  stripeSubscriptionId String?  @unique
+  plan                 Plan     @default(FREE)
+  status               String   @default("inactive")
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model LeadGenerationRun {
+  id           String   @id @default(cuid())
+  userId        String?
+  niche         String
+  location      String
+  serviceOffer  String
+  businessType  String
+  keywords      String
+  tone          String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  user          User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  leads         Lead[]
+}
+
+model Lead {
+  id             String   @id @default(cuid())
+  runId          String
+  businessName   String
+  website        String
+  email          String
+  phone          String
+  notes          String
+  leadScore      Int
+  outreachEmail  String
+  followUpEmail  String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  run            LeadGenerationRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+}
+
+enum Plan {
+  FREE
+  PRO
+  AGENCY
+}
