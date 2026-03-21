@@ -4,3 +4,9 @@ data/leadflow.db-wal
 data/leadflow.db-shm
 .env
 npm-debug.log*
+node_modules
+.next
+.env
+.env.local
+prisma/dev.db
+*.csv
