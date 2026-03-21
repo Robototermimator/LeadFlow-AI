@@ -1,0 +1,41 @@
+<%- include('partials/header', { title, user }) %>
+<%- include('partials/app-nav') %>
+<section class="page-head"><h1>Generate Leads</h1><p>Fill your targeting criteria and create a saved lead batch.</p></section>
+
+<section class="card">
+  <% if (error) { %><p class="alert error"><%= error %></p><% } %>
+  <% if (success) { %><p class="alert success"><%= success %></p><% } %>
+  <form method="POST" action="/app/generate" class="form-grid two-col">
+    <label>Niche<input name="niche" value="<%= form.niche || '' %>" required /></label>
+    <label>Location<input name="location" value="<%= form.location || '' %>" required /></label>
+    <label>Service Offer<input name="service_offer" value="<%= form.service_offer || '' %>" required /></label>
+    <label>Target Business Type<input name="target_business_type" value="<%= form.target_business_type || '' %>" required /></label>
+    <label>Keywords<input name="keywords" value="<%= form.keywords || '' %>" required /></label>
+    <label>Tone
+      <select name="tone" required>
+        <% ['Professional','Consultative','Friendly','Direct'].forEach(t => { %>
+          <option value="<%= t %>" <%= (form.tone === t ? 'selected' : '') %>><%= t %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label>Lead Count<input name="count" type="number" min="1" value="<%= form.count || 10 %>" required /></label>
+    <div><button id="generate-btn" class="btn" type="submit">Generate Leads</button></div>
+  </form>
+</section>
+
+<% if (results.length) { %>
+<section class="card">
+  <h2>Generated Results</h2>
+  <div class="table-wrap"><table><thead><tr><th>Business</th><th>Email</th><th>Score</th><th>Subject</th></tr></thead><tbody>
+  <% results.forEach(lead => { %>
+    <tr>
+      <td><%= lead.business_name %></td>
+      <td><%= lead.contact_email %></td>
+      <td><%= lead.lead_score %></td>
+      <td><%= lead.outreach_subject %></td>
+    </tr>
+  <% }) %>
+  </tbody></table></div>
+</section>
+<% } %>
+<%- include('partials/footer') %>

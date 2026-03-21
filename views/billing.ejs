@@ -1,0 +1,21 @@
+<%- include('partials/header', { title, user }) %>
+<%- include('partials/app-nav') %>
+<section class="page-head"><h1>Billing & Plans</h1><p>Select your plan. Payment buttons are integration placeholders.</p></section>
+<% if (message) { %><p class="alert success"><%= message %></p><% } %>
+<div class="grid-3">
+  <% ['Free','Pro','Agency'].forEach(plan => { %>
+    <article class="card plan <%= user.plan === plan ? 'featured' : '' %>">
+      <h3><%= plan %></h3>
+      <% if (plan === 'Free') { %><p class="price">$0</p><% } %>
+      <% if (plan === 'Pro') { %><p class="price">$49/mo</p><% } %>
+      <% if (plan === 'Agency') { %><p class="price">$149/mo</p><% } %>
+      <form method="POST" action="/app/billing/plan">
+        <input type="hidden" name="plan" value="<%= plan %>" />
+        <button class="btn" type="submit"><%= user.plan === plan ? 'Current Plan' : `Switch to ${plan}` %></button>
+      </form>
+      <p class="muted">Placeholder: connect Stripe/PayPal checkout here.</p>
+    </article>
+  <% }) %>
+</div>
+<section class="card"><h3>Current limits</h3><p><%= user.plan %>: <%= limits.runsPerMonth %> runs/month and <%= limits.maxLeadsPerRun %> leads/run.</p></section>
+<%- include('partials/footer') %>

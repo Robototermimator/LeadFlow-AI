@@ -1,0 +1,39 @@
+<%- include('partials/header', { title, user }) %>
+<%- include('partials/app-nav') %>
+<section class="page-head">
+  <h1>Dashboard</h1>
+  <p>Welcome, <%= user.name %>. Plan: <strong><%= user.plan %></strong>.</p>
+  <p class="badge <%= !process.env.OPENAI_API_KEY ? 'warning' : '' %>"><%= !process.env.OPENAI_API_KEY ? 'Demo Mode Active' : 'Live AI Mode' %></p>
+</section>
+<div class="grid-4">
+  <div class="card stat"><h3>Total Leads</h3><p><%= stats.totalLeads %></p></div>
+  <div class="card stat"><h3>Total Runs</h3><p><%= stats.totalRuns %></p></div>
+  <div class="card stat"><h3>Contacted</h3><p><%= stats.contacted %></p></div>
+  <div class="card stat"><h3>This Month</h3><p><%= stats.monthRuns %> / <%= stats.limits.runsPerMonth %> runs</p></div>
+</div>
+<section class="card">
+  <h2>Quick actions</h2>
+  <div class="actions">
+    <a class="btn" href="/app/generate">Generate Leads</a>
+    <a class="btn secondary" href="/app/leads">View Leads</a>
+    <a class="btn secondary" href="/app/billing">Manage Plan</a>
+  </div>
+</section>
+<section class="card">
+  <h2>Recent Runs</h2>
+  <% if (!recentRuns.length) { %>
+    <p class="muted">No runs yet. Start from the Generate Leads page.</p>
+  <% } else { %>
+    <div class="table-wrap"><table><thead><tr><th>Date</th><th>Criteria</th><th>Status</th><th>Leads</th></tr></thead><tbody>
+      <% recentRuns.forEach(run => { %>
+        <tr>
+          <td><%= run.created_at %></td>
+          <td><%= run.niche %> in <%= run.location %></td>
+          <td><%= run.status %></td>
+          <td><%= run.leads_generated %></td>
+        </tr>
+      <% }) %>
+    </tbody></table></div>
+  <% } %>
+</section>
+<%- include('partials/footer') %>
