@@ -50,6 +50,26 @@ See:
 - `examples/sample-output.csv`
 - `examples/sample-output.json`
 
+## Build a Windows .exe (no coding needed)
+1. In terminal, run:
+```bash
+npm install
+npm run build:win
+```
+2. Open the `dist` folder.
+3. You will see `leadflow-cli-v2.exe` (or similar).
+
+## Run the .exe
+Open terminal in the `dist` folder and run:
+```bash
+leadflow-cli-v2.exe generate --niche "dentists" --location "Cape Town" --service "website redesign" --count 10 --mode deep --output leads.csv
+```
+
+## Build all standalone apps (Windows, Mac, Linux)
+```bash
+npm run build:exe
+```
+
 ## Help and version
 ```bash
 leadflow --help

@@ -1,9 +1,9 @@
-const path = require('path');
 const { generateLeads } = require('./generator');
 const { toCsv, toJson, inferFormat } = require('./export');
-const { printHeader, info, success, warn, error, printPreview, safeWrite } = require('./ui');
+const { printHeader, info, success, error, printPreview, safeWrite } = require('./ui');
+const { resolveOutputPath, ensureParentDir } = require('./paths');
 
-const VERSION = '2.0.0';
+const VERSION = '2.1.0';
 const MODES = ['quick', 'deep', 'aggressive'];
 
 function helpText() {
@@ -76,7 +76,7 @@ function runGenerate(parsed) {
   }
 
   const service = String(parsed.service || 'website redesign');
-  const output = path.resolve(process.cwd(), String(parsed.output || 'leads.csv'));
+  const output = resolveOutputPath(parsed.output || 'leads.csv');
 
   printHeader();
   info('Generating leads...');
@@ -95,6 +95,7 @@ function runGenerate(parsed) {
 
   const format = inferFormat(output);
   const content = format === 'json' ? toJson(leads) : toCsv(leads);
+  ensureParentDir(output);
   safeWrite(output, content);
 
   success(`${leads.length} leads generated`);

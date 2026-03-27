@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-27T15:47:20.061Z",
-  "total": 3,
+  "generatedAt": "2026-03-27T16:07:12.326Z",
+  "total": 2,
   "leads": [
     {
       "id": 1,
@@ -15,16 +15,19 @@
       "detectedProblems": [
         "Inconsistent dentists lead flow across online channels",
         "Messaging does not clearly position website redesign",
-        "No strong conversion path from website visitors to booked calls"
+        "No strong conversion path from website visitors to booked calls",
+        "Competitors are likely capturing demand due to faster outreach"
       ],
       "suggestedImprovements": [
         "Launch a localized offer page targeting Cape Town",
         "Implement clear CTA flow focused on website redesign",
-        "Add 3-step outreach + follow-up sequence for unresponsive prospects"
+        "Add 3-step outreach + follow-up sequence for unresponsive prospects",
+        "Create segmented messaging for new vs returning prospects",
+        "Run a fast 14-day acquisition sprint with daily outbound"
       ],
-      "suggestedOffer": "website redesign Starter Package for dentists",
-      "leadScore": 52,
-      "mode": "quick",
+      "suggestedOffer": "website redesign Growth Sprint for dentists (14-day quick wins)",
+      "leadScore": 60,
+      "mode": "aggressive",
       "outreachSubject": "City Bowl Urban dentist Partners: quick website redesign idea for Cape Town",
       "outreachEmail": "Hi Morgan,\n\nI came across City Bowl Urban dentist Partners and noticed opportunities around inconsistent dentists lead flow across online channels.\nI help dentists businesses improve results with website redesign.\n\nIf helpful, I can send a short plan with 3 practical fixes tailored for City Bowl Urban dentist Partners.\n\nBest,\n[Your Name]",
       "followUpEmail": "Hi Morgan,\n\nQuick follow-up on my note about website redesign for City Bowl Urban dentist Partners.\nHappy to share a concise action plan you can review in 5 minutes.\n\nWould you like me to send it?\n\nBest,\n[Your Name]"
@@ -42,46 +45,22 @@
       "detectedProblems": [
         "Inconsistent dentists lead flow across online channels",
         "Messaging does not clearly position website redesign",
-        "No strong conversion path from website visitors to booked calls"
+        "No strong conversion path from website visitors to booked calls",
+        "Competitors are likely capturing demand due to faster outreach"
       ],
       "suggestedImprovements": [
         "Launch a localized offer page targeting Cape Town",
         "Implement clear CTA flow focused on website redesign",
-        "Add 3-step outreach + follow-up sequence for unresponsive prospects"
+        "Add 3-step outreach + follow-up sequence for unresponsive prospects",
+        "Create segmented messaging for new vs returning prospects",
+        "Run a fast 14-day acquisition sprint with daily outbound"
       ],
-      "suggestedOffer": "website redesign Starter Package for dentists",
-      "leadScore": 63,
-      "mode": "quick",
+      "suggestedOffer": "website redesign Growth Sprint for dentists (14-day quick wins)",
+      "leadScore": 71,
+      "mode": "aggressive",
       "outreachSubject": "Sea Point Prime dentist Studio: quick website redesign idea for Cape Town",
       "outreachEmail": "Hi Alex,\n\nI came across Sea Point Prime dentist Studio and noticed opportunities around inconsistent dentists lead flow across online channels.\nI help dentists businesses improve results with website redesign.\n\nIf helpful, I can send a short plan with 3 practical fixes tailored for Sea Point Prime dentist Studio.\n\nBest,\n[Your Name]",
       "followUpEmail": "Hi Alex,\n\nQuick follow-up on my note about website redesign for Sea Point Prime dentist Studio.\nHappy to share a concise action plan you can review in 5 minutes.\n\nWould you like me to send it?\n\nBest,\n[Your Name]"
-    },
-    {
-      "id": 3,
-      "businessName": "City Bowl Trusted dentist Solutions",
-      "website": "https://www.dentists413.com",
-      "contactName": "Taylor",
-      "contactEmail": "hello@dentists413.com",
-      "phone": "+1-555-821-5157",
-      "niche": "dentists",
-      "location": "Cape Town",
-      "service": "website redesign",
-      "detectedProblems": [
-        "Inconsistent dentists lead flow across online channels",
-        "Messaging does not clearly position website redesign",
-        "No strong conversion path from website visitors to booked calls"
-      ],
-      "suggestedImprovements": [
-        "Launch a localized offer page targeting Cape Town",
-        "Implement clear CTA flow focused on website redesign",
-        "Add 3-step outreach + follow-up sequence for unresponsive prospects"
-      ],
-      "suggestedOffer": "website redesign Starter Package for dentists",
-      "leadScore": 74,
-      "mode": "quick",
-      "outreachSubject": "City Bowl Trusted dentist Solutions: quick website redesign idea for Cape Town",
-      "outreachEmail": "Hi Taylor,\n\nI came across City Bowl Trusted dentist Solutions and noticed opportunities around inconsistent dentists lead flow across online channels.\nI help dentists businesses improve results with website redesign.\n\nIf helpful, I can send a short plan with 3 practical fixes tailored for City Bowl Trusted dentist Solutions.\n\nBest,\n[Your Name]",
-      "followUpEmail": "Hi Taylor,\n\nQuick follow-up on my note about website redesign for City Bowl Trusted dentist Solutions.\nHappy to share a concise action plan you can review in 5 minutes.\n\nWould you like me to send it?\n\nBest,\n[Your Name]"
     }
   ]
 }

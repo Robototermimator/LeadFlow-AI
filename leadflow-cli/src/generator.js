@@ -1,12 +1,12 @@
-const path = require('path');
 const fs = require('fs');
+const { resolveDataPath } = require('./paths');
 const { detectProblems, suggestImprovements, suggestOffer } = require('./intelligence');
 const { outreachEmail, followUpEmail } = require('./emailEngine');
 const { scoreLead } = require('./scoring');
 
 function loadJson(fileName) {
-  const p = path.join(__dirname, '..', 'data', fileName);
-  return JSON.parse(fs.readFileSync(p, 'utf8'));
+  const filePath = resolveDataPath(fileName);
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
 function slug(value) {
