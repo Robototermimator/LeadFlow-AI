@@ -1,0 +1,43 @@
+<%- include('partials/header', { title, user }) %>
+
+<section class="hero">
+  <div>
+    <p class="badge">AI Lead Generation Agent</p>
+    <h1>Find high-intent leads and launch outreach in minutes.</h1>
+    <p>LeadFlow AI helps freelancers, agencies, consultants, and small businesses generate, score, and convert leads with personalized outreach.</p>
+    <div class="actions">
+      <a class="btn" href="<%= currentUser ? '/app/dashboard' : '/register' %>"><%= currentUser ? 'Open Dashboard' : 'Start Free' %></a>
+      <a class="btn secondary" href="/pricing">See Plans</a>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Why teams buy LeadFlow AI</h3>
+    <ul>
+      <li>Generate realistic local business leads instantly</li>
+      <li>Get outreach subject + email + follow-up copy per lead</li>
+      <li>Track contacted status and export to CSV</li>
+      <li>Use demo mode without API costs</li>
+    </ul>
+  </div>
+</section>
+
+<section class="grid-3">
+  <article class="card"><h3>Benefits</h3><p>Replace manual prospecting hours with focused, scored leads and ready-to-send email copy.</p></article>
+  <article class="card"><h3>How it works</h3><p>Enter niche, location, offer, keywords, and tone. LeadFlow AI generates and stores complete lead records.</p></article>
+  <article class="card"><h3>Built to sell</h3><p>Use as your internal lead engine or offer as a done-for-you service to clients.</p></article>
+</section>
+
+<section class="card testimonials">
+  <h2>Testimonials</h2>
+  <blockquote>“LeadFlow AI helped us fill our pipeline in week one.” — Agency Owner</blockquote>
+  <blockquote>“I closed two new web design clients from one generated batch.” — Freelancer</blockquote>
+</section>
+
+<section class="card faq">
+  <h2>FAQ</h2>
+  <p><strong>Do I need OpenAI to test?</strong> No, demo mode works fully without an API key.</p>
+  <p><strong>Can I use this on mobile?</strong> Yes, the interface is responsive for phone/tablet/laptop.</p>
+  <p><strong>Can I upgrade later?</strong> Yes, plan changes are available from billing page instantly.</p>
+</section>
+
+<%- include('partials/footer') %>

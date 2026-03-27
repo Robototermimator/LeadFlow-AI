@@ -1,0 +1,17 @@
+{
+  "name": "leadflow-cli-v2",
+  "version": "2.0.0",
+  "description": "LeadFlow CLI v2 — AI Client Acquisition System (offline)",
+  "license": "MIT",
+  "bin": {
+    "leadflow": "./index.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "sample": "node index.js generate --niche dentists --location \"Cape Town\" --service \"website redesign\" --count 5 --mode deep --output examples/sample-output.csv"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

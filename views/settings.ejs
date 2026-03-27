@@ -1,0 +1,23 @@
+<%- include('partials/header', { title, user }) %>
+<%- include('partials/app-nav') %>
+<section class="page-head"><h1>Settings</h1><p>Account, plan, and usage details.</p></section>
+<section class="card">
+  <h2>Profile</h2>
+  <p><strong>Name:</strong> <%= user.name %></p>
+  <p><strong>Email:</strong> <%= user.email %></p>
+  <p><strong>Plan:</strong> <%= user.plan %></p>
+</section>
+<section class="card">
+  <h2>Usage</h2>
+  <p>Runs this month: <%= usage.monthRuns %> / <%= usage.limits.runsPerMonth %></p>
+  <p>Leads this month: <%= usage.monthLeads %></p>
+  <p>Demo mode status: <strong><%= usage.demoMode ? 'Active (no OPENAI_API_KEY)' : 'Disabled (Live AI mode)' %></strong></p>
+</section>
+<section class="card danger-zone">
+  <h2>Delete Account</h2>
+  <p>This permanently deletes your account, runs, and leads.</p>
+  <form method="POST" action="/app/settings/delete-account" onsubmit="return confirm('Delete your account permanently?');">
+    <button class="btn danger" type="submit">Delete My Account</button>
+  </form>
+</section>
+<%- include('partials/footer') %>

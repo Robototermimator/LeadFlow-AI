@@ -1,0 +1,42 @@
+<%- include('partials/header', { title, user }) %>
+<%- include('partials/app-nav') %>
+<section class="page-head"><h1>Leads</h1><p>Search, filter, sort, contact, and export your pipeline.</p></section>
+<section class="card">
+  <form method="GET" action="/app/leads" class="toolbar">
+    <input name="q" placeholder="Search business name" value="<%= filters.q %>" />
+    <select name="contacted">
+      <option value="all" <%= filters.contacted === 'all' ? 'selected' : '' %>>All</option>
+      <option value="yes" <%= filters.contacted === 'yes' ? 'selected' : '' %>>Contacted</option>
+      <option value="no" <%= filters.contacted === 'no' ? 'selected' : '' %>>Uncontacted</option>
+    </select>
+    <select name="sort">
+      <option value="score_desc" <%= filters.sort === 'score_desc' ? 'selected' : '' %>>Score high-low</option>
+      <option value="score_asc" <%= filters.sort === 'score_asc' ? 'selected' : '' %>>Score low-high</option>
+      <option value="newest" <%= filters.sort === 'newest' ? 'selected' : '' %>>Newest</option>
+    </select>
+    <button class="btn" type="submit">Apply</button>
+    <a class="btn secondary" href="/app/leads/export.csv">Export CSV</a>
+  </form>
+
+  <% if (!leads.length) { %>
+    <p class="muted">No leads found for this filter.</p>
+  <% } else { %>
+    <div class="table-wrap"><table><thead><tr><th>Business</th><th>Contact</th><th>Score</th><th>Outreach</th><th>Follow-up</th><th>Status</th></tr></thead><tbody>
+      <% leads.forEach(lead => { %>
+        <tr>
+          <td><strong><%= lead.business_name %></strong><br/><small><a href="<%= lead.website %>" target="_blank" rel="noreferrer"><%= lead.website %></a></small></td>
+          <td><%= lead.contact_email %><br/><small><%= lead.phone %></small></td>
+          <td><%= lead.lead_score %></td>
+          <td><button class="copy-btn" data-copy="<%= lead.outreach_subject.replace(/"/g,'&quot;') %>\n\n<%= lead.outreach_body.replace(/"/g,'&quot;') %>">Copy Outreach</button></td>
+          <td><button class="copy-btn" data-copy="<%= lead.follow_up_body.replace(/"/g,'&quot;') %>">Copy Follow-up</button></td>
+          <td>
+            <form method="POST" action="/app/leads/<%= lead.id %>/contacted">
+              <button class="btn <%= lead.contacted ? 'secondary' : '' %>" type="submit"><%= lead.contacted ? 'Contacted' : 'Mark Contacted' %></button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody></table></div>
+  <% } %>
+</section>
+<%- include('partials/footer') %>

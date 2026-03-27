@@ -1,0 +1,13 @@
+<%- include('partials/header', { title }) %>
+<section class="auth-wrap card">
+  <h1>Create Account</h1>
+  <% if (error) { %><p class="alert error"><%= error %></p><% } %>
+  <form method="POST" action="/register" class="form-grid">
+    <label>Name<input type="text" name="name" value="<%= old.name || '' %>" required /></label>
+    <label>Email<input type="email" name="email" value="<%= old.email || '' %>" required /></label>
+    <label>Password<input type="password" name="password" required minlength="6" /></label>
+    <button class="btn" type="submit">Create Account</button>
+  </form>
+  <p>Already have an account? <a href="/login">Login</a></p>
+</section>
+<%- include('partials/footer') %>

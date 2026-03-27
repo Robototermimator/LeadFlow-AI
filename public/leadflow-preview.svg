@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="LeadFlow AI UI mockup">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1400" height="70" fill="#020617"/>
+  <text x="40" y="43" fill="#f8fafc" font-size="28" font-family="Arial" font-weight="700">LeadFlow AI</text>
+  <text x="260" y="42" fill="#94a3b8" font-size="18" font-family="Arial">Dashboard   Generate Leads   Leads   Run History   Billing</text>
+
+  <rect x="40" y="95" width="1320" height="125" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="70" y="145" fill="#e5e7eb" font-size="34" font-family="Arial" font-weight="700">Find high-intent leads and launch outreach in minutes</text>
+  <text x="70" y="185" fill="#86efac" font-size="20" font-family="Arial">Demo Mode Active • Free Plan • 2/3 monthly runs used</text>
+
+  <g font-family="Arial">
+    <rect x="40" y="245" width="315" height="115" rx="12" fill="#111827" stroke="#1f2937"/><text x="62" y="285" fill="#9ca3af" font-size="20">Total Leads</text><text x="62" y="330" fill="#e5e7eb" font-size="44" font-weight="700">248</text>
+    <rect x="375" y="245" width="315" height="115" rx="12" fill="#111827" stroke="#1f2937"/><text x="397" y="285" fill="#9ca3af" font-size="20">Total Runs</text><text x="397" y="330" fill="#e5e7eb" font-size="44" font-weight="700">12</text>
+    <rect x="710" y="245" width="315" height="115" rx="12" fill="#111827" stroke="#1f2937"/><text x="732" y="285" fill="#9ca3af" font-size="20">Contacted</text><text x="732" y="330" fill="#e5e7eb" font-size="44" font-weight="700">67</text>
+    <rect x="1045" y="245" width="315" height="115" rx="12" fill="#111827" stroke="#1f2937"/><text x="1067" y="285" fill="#9ca3af" font-size="20">This Month</text><text x="1067" y="330" fill="#e5e7eb" font-size="38" font-weight="700">2 / 3</text>
+  </g>
+
+  <rect x="40" y="385" width="870" height="475" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="65" y="422" fill="#e5e7eb" font-size="30" font-family="Arial" font-weight="700">Leads</text>
+  <text x="65" y="458" fill="#9ca3af" font-size="18" font-family="Arial">Business</text>
+  <text x="355" y="458" fill="#9ca3af" font-size="18" font-family="Arial">Email</text>
+  <text x="640" y="458" fill="#9ca3af" font-size="18" font-family="Arial">Score</text>
+  <text x="740" y="458" fill="#9ca3af" font-size="18" font-family="Arial">Status</text>
+
+  <g font-family="Arial" font-size="20">
+    <line x1="60" y1="478" x2="890" y2="478" stroke="#1f2937"/>
+    <text x="65" y="520" fill="#e5e7eb">Cape Smile Dental Studio</text><text x="355" y="520" fill="#93c5fd">hello@dentist312.com</text><text x="640" y="520" fill="#e5e7eb">91</text><text x="740" y="520" fill="#fcd34d">Uncontacted</text>
+    <line x1="60" y1="550" x2="890" y2="550" stroke="#1f2937"/>
+    <text x="65" y="592" fill="#e5e7eb">Sea Point Dental Care</text><text x="355" y="592" fill="#93c5fd">contact@dentist417.com</text><text x="640" y="592" fill="#e5e7eb">88</text><text x="740" y="592" fill="#86efac">Contacted</text>
+    <line x1="60" y1="622" x2="890" y2="622" stroke="#1f2937"/>
+    <text x="65" y="664" fill="#e5e7eb">Table View Ortho Group</text><text x="355" y="664" fill="#93c5fd">info@dentist528.com</text><text x="640" y="664" fill="#e5e7eb">84</text><text x="740" y="664" fill="#fcd34d">Uncontacted</text>
+    <line x1="60" y1="694" x2="890" y2="694" stroke="#1f2937"/>
+    <text x="65" y="736" fill="#e5e7eb">Urban Family Dentistry</text><text x="355" y="736" fill="#93c5fd">team@dentist613.com</text><text x="640" y="736" fill="#e5e7eb">81</text><text x="740" y="736" fill="#fcd34d">Uncontacted</text>
+  </g>
+
+  <rect x="940" y="385" width="420" height="475" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="965" y="422" fill="#e5e7eb" font-size="30" font-family="Arial" font-weight="700">Generate Leads</text>
+  <g font-family="Arial" font-size="17" fill="#cbd5e1">
+    <rect x="960" y="448" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="476">Niche: Dentists</text>
+    <rect x="960" y="503" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="531">Location: Cape Town</text>
+    <rect x="960" y="558" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="586">Service: Website redesign</text>
+    <rect x="960" y="613" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="641">Target: Small practices</text>
+    <rect x="960" y="668" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="696">Keywords: SEO, bookings</text>
+    <rect x="960" y="723" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="751">Tone: Consultative</text>
+    <rect x="960" y="778" width="380" height="45" rx="8" fill="#0b1220" stroke="#1f2937"/><text x="974" y="806">Count: 10</text>
+  </g>
+  <rect x="960" y="829" width="380" height="26" rx="8" fill="#22c55e"/>
+  <text x="1112" y="848" fill="#052e16" font-size="17" font-family="Arial" font-weight="700">Generate</text>
+</svg>
